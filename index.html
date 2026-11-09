@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feedback Tip Library</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ============================================================
+         FEEDBACK TIP LIBRARY
+         ============================================================
+         A learner picks the kind of feedback tip they want to see.
+         The page remembers which category is selected, and a loop
+         in script.js draws the matching tips. The tip list below is
+         empty on purpose: JavaScript builds every card.
+         ============================================================ -->
+
+    <main class="library">
+      <h1>Giving Useful Feedback</h1>
+      <p class="intro">Choose the kind of tip you need right now.</p>
+
+      <!-- Each button's data-filter matches a category in the tips array -->
+      <div class="filters" role="group" aria-label="Filter tips by category">
+        <button type="button" class="filter-button" data-filter="all">All</button>
+        <button type="button" class="filter-button" data-filter="specific">Specific</button>
+        <button type="button" class="filter-button" data-filter="kind">Kind</button>
+        <button type="button" class="filter-button" data-filter="actionable">Actionable</button>
+      </div>
+
+      <p id="count" class="count" role="status"></p>
+
+      <div id="tip-list" class="tip-list"></div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

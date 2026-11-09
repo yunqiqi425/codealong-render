@@ -1,0 +1,101 @@
+/* === RESET === */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* === PAGE STYLING === */
+body {
+  font-family: system-ui, sans-serif;
+  min-height: 100vh;
+  padding: 2rem;
+  background: #f0f0f0;
+  color: #333;
+}
+
+/* === LIBRARY CARD === */
+.library {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 8px;
+}
+
+h1 {
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.intro {
+  margin-bottom: 1.5rem;
+}
+
+/* === FILTER BUTTONS === */
+/* filters: one row of buttons, so flex */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+button {
+  min-height: 44px;
+  padding: 0.5rem 1.25rem;
+  border: 2px solid #1d4ed8;
+  border-radius: 4px;
+  background: #fff;
+  color: #1d4ed8;
+  font: inherit;
+  cursor: pointer;
+}
+
+/* The selected button, set by render() from the state */
+button.is-selected {
+  background: #1d4ed8;
+  color: #fff;
+}
+
+/* === COUNT === */
+.count {
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+/* === TIP CARDS (built by script.js) === */
+/* tip-list: equal cards that should reflow on their own, so auto-fit grid */
+.tip-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: 1rem;
+}
+
+.tip {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.tip h2 {
+  margin-bottom: 0.25rem;
+  font-size: 1.125rem;
+}
+
+.tip-tag {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  padding: 0.125rem 0.5rem;
+  border-radius: 999px;
+  background: #e0e7ff;
+  font-size: 0.875rem;
+}
+
+/* === STRETCH: animate the change === */
+/* Uncomment to fade the selected button's colors instead of switching instantly */
+/* button {
+  transition: background-color 0.2s, color 0.2s;
+} */
